@@ -21,15 +21,15 @@
     </head>
 
     <body>
-        <script src="/js/three.min.js"></script>
-        <script src="/js/OBJLoader.js"></script>
-        <script src="/js/MTLLoader.js"></script>
+        <script src="./js/three.min.js"></script>
+        <script src="./js/OBJLoader.js"></script>
+        <script src="./js/MTLLoader.js"></script>
 
         <script type="module">
             import {
               AbsoluteOrientationSensor,
               RelativeOrientationSensor
-            } from '/js/sensor-polyfills/motion-sensors.js';
+            } from './js/sensor-polyfills/motion-sensors.js';
 
             const params = new URLSearchParams(new URL(window.location.href).search.slice(1));
             const relative = !!Number(params.get("relative"));
