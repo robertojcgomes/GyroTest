@@ -74,12 +74,12 @@
 
                 var manager = new THREE.LoadingManager();
                 var mtlLoader = new THREE.MTLLoader(manager);
-                mtlLoader.setTexturePath('resources/');
-                mtlLoader.load('resources/phone.mtl', materials => {
+                mtlLoader.setTexturePath('./resources/');
+                mtlLoader.load('./resources/phone.mtl', materials => {
                     materials.preload();
                     var objLoader = new THREE.OBJLoader(manager);
                     objLoader.setMaterials(materials);
-                    objLoader.load('resources/phone.obj', object => {
+                    objLoader.load('./resources/phone.obj', object => {
                         model = object;
                         scene.add(model);
                   });
